@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">mortgagagag</string>
+    <string name="headerline">Mortgage Calculator</string>
+    <string name="HHomeValue">Home Value</string>
+    <string name="HomeValue">Home Value</string>
+    <string name="HPurchasprice">Purchasprice</string>
+    <string name="Purchasprice">Purchasprice</string>
+    <string name="HInterestRate">Interest Rate</string>
+    <string name="InterestRate">Interest Rate</string>
+    <string name="HMonthlyPayment">Monthly Payment</string>
+    <string name="MonthlyPayment">Monthly Payment</string>
+    <string name="HTotatAmonutofDebt">Tota tAmonut of Debt</string>
+    <string name="TotatAmonutofDebt">Totat Amonut of Debt</string>
+    <string name="HCapital">Capital</string>
+    <string name="Capital">Capital</string>
+    <string name="HDistinctionBetween">Distinction Between</string>
+    <string name="DistinctionBetween">Distinction Between</string>
+    <string name="HDownPaymentAmount">Down Payment Amount</string>
+    <string name="years">years</string>
+</resources>

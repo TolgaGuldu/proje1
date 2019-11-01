@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tolga.mortggage.MainActivity"
+    android:id="@+id/relative">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/headerline"
+        android:id="@+id/Header"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HPurchasePrice"
+        android:text="@string/HPurchasprice"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/Header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HHomeValue"
+        android:text="@string/HHomeValue"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/Header"
+        android:layout_alignRight="@+id/HPurchasePrice"
+        android:layout_alignEnd="@+id/HPurchasePrice" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HomeValue"
+        android:inputType="number"
+        android:layout_below="@+id/Header"
+        android:layout_toRightOf="@+id/HHomeValue"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_alignRight="@+id/Header"
+        android:layout_alignEnd="@+id/Header"
+        android:text="@string/HomeValue"
+        android:textAlignment="@string/HomeValue" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Purchasprice"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/HPurchasePrice"
+        android:layout_alignLeft="@+id/HomeValue"
+        android:layout_alignStart="@+id/HomeValue"
+        android:layout_alignRight="@+id/HomeValue"
+        android:layout_alignEnd="@+id/HomeValue"
+        android:text="@string/Purchasprice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HInterestRate"
+        android:text="@string/HInterestRate"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/HPurchasePrice"
+        android:layout_toLeftOf="@+id/HomeValue"
+        android:layout_toStartOf="@+id/HomeValue" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/InterestRate"
+        android:inputType="number"
+        android:text="@string/InterestRate"
+        android:layout_alignBottom="@+id/HInterestRate"
+        android:layout_alignLeft="@+id/Purchasprice"
+        android:layout_alignStart="@+id/Purchasprice"
+        android:layout_alignRight="@+id/Purchasprice"
+        android:layout_alignEnd="@+id/Purchasprice" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:max="30"
+        android:progress="10"
+        android:indeterminate="false"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/TotatAmonutofDebt"
+        android:layout_toStartOf="@+id/TotatAmonutofDebt">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/years"
+            android:id="@+id/TextView"
+            android:layout_below="@+id/DownPaymentAmount"
+            android:layout_toRightOf="@+id/InterestRate"
+            android:layout_toEndOf="@+id/InterestRate" >
+
+        </TextView></SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/HDownPaymentAmount"
+        android:id="@+id/DownPaymentAmount"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignLeft="@+id/HInterestRate"
+        android:layout_alignStart="@+id/HInterestRate"
+        android:layout_marginBottom="18dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HMonthlyPayment"
+        android:text="@string/HMonthlyPayment"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_toLeftOf="@+id/InterestRate"
+        android:layout_toStartOf="@+id/InterestRate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MonthlyPayment"
+        android:inputType="numberDecimal"
+        android:text="@string/MonthlyPayment"
+        android:textAlignment="@string/HomeValue"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignLeft="@+id/TotatAmonutofDebt"
+        android:layout_alignStart="@+id/TotatAmonutofDebt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HTotatAmonutofDebt"
+        android:text="@string/HTotatAmonutofDebt"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/HMonthlyPayment"
+        android:layout_alignLeft="@+id/HCapital"
+        android:layout_alignStart="@+id/HCapital" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TotatAmonutofDebt"
+        android:inputType="numberDecimal"
+        android:text="@string/TotatAmonutofDebt"
+        android:layout_below="@+id/MonthlyPayment"
+        android:layout_toRightOf="@+id/DownPaymentAmount"
+        android:layout_toEndOf="@+id/DownPaymentAmount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HCapital"
+        android:text="@string/HCapital"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/HMonthlyPayment"
+        android:layout_alignStart="@+id/HMonthlyPayment"
+        android:layout_marginBottom="64dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Capital"
+        android:inputType="number"
+        android:text="@string/Capital"
+        android:layout_alignBottom="@+id/HCapital"
+        android:layout_alignLeft="@+id/DistinctionBetween"
+        android:layout_alignStart="@+id/DistinctionBetween" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HDistinctionBetween"
+        android:text="@string/HDistinctionBetween"
+        android:layout_alignBaseline="@+id/DistinctionBetween"
+        android:layout_alignBottom="@+id/DistinctionBetween"
+        android:layout_alignLeft="@+id/HCapital"
+        android:layout_alignStart="@+id/HCapital" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DistinctionBetween"
+        android:inputType="numberDecimal"
+        android:text="@string/DistinctionBetween"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/TotatAmonutofDebt"
+        android:layout_alignStart="@+id/TotatAmonutofDebt" />
+
+</RelativeLayout>
